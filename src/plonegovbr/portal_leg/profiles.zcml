@@ -1,0 +1,65 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="plonegovbr.portal_leg"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="PortalBrasil.leg: Instalação"
+      description="Configuração de um site PortalBrasil.leg"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      />
+
+  <genericsetup:registerProfile
+      name="municipal"
+      title="PortalBrasil.leg: Municipal"
+      description="Configuração de um site PortalBrasil.leg para Câmara de Vereadores"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/municipal"
+      />
+
+  <genericsetup:registerProfile
+      name="estadual"
+      title="PortalBrasil.leg: Estadual"
+      description="Configuração de um site PortalBrasil.leg para Assembléia Legislativa"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/estadual"
+      />
+
+  <genericsetup:registerProfile
+      name="distrital"
+      title="PortalBrasil.leg: Distrital"
+      description="Configuração de um site PortalBrasil.leg para Câmara Distrital"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/distrital"
+      />
+
+  <genericsetup:registerProfile
+      name="federal_dep"
+      title="PortalBrasil.leg: Câmara dos Deputados"
+      description="Configuração de um site PortalBrasil.leg para Câmara dos Deputados"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/federal_dep"
+      />
+
+  <genericsetup:registerProfile
+      name="federal_sen"
+      title="PortalBrasil.leg: Senado Federal"
+      description="Configuração de um site PortalBrasil.leg para Senado Federal"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/federal_sen"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="PortalBrasil.leg: Uninstall"
+      description="Uninstall PortalBrasil.leg setup."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
+
+  <include package=".upgrades" />
+
+</configure>

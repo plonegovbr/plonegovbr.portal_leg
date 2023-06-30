@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="plonegovbr.portal_leg"
+    >
+
+  <i18n:registerTranslations directory="locales" />
+
+  <include
+      package="Products.CMFCore"
+      file="permissions.zcml"
+      />
+
+  <include file="dependencies.zcml" />
+  <include file="distributions.zcml" />
+  <include file="profiles.zcml" />
+
+
+</configure>

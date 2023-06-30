@@ -1,0 +1,334 @@
+{
+  "schema": {
+    "title": "Criar novo site",
+    "description": "Adiciona um novo site PortalBrasil.leg a este servidor.",
+    "type": "object",
+    "required": [
+      "site_id",
+      "tipo",
+      "estado",
+      "title"
+    ],
+    "properties": {
+      "site_id": {
+        "type": "string",
+        "title": "Caminho",
+        "default": "Plone",
+        "description": "O nome curto (id) do site. Não são permitidos caracteres especiais ou espaços. Isso acaba como parte do URL, a menos que seja ocultado por um servidor da Web upstream."
+      },
+      "tipo": {
+        "type": "string",
+        "title": "Tipo do site",
+        "description": "Escolha o tipo de site a ser criado",
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "municipal"
+            ],
+            "title": "Câmara de Vereadores"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "estadual"
+            ],
+            "title": "Assembléia Legislativa"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "federal_dep"
+            ],
+            "title": "Câmara dos Deputados"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "federal_sen"
+            ],
+            "title": "Senado Federal"
+          }
+        ]
+      },
+      "estado": {
+        "type": "string",
+        "title": "Estado",
+        "description": "Estado onde a instituição está localizada",
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "AC"
+            ],
+            "title": "Acre"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "AL"
+            ],
+            "title": "Alagoas"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "AM"
+            ],
+            "title": "Amazonas"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "AP"
+            ],
+            "title": "Amap\u00e1"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "BA"
+            ],
+            "title": "Bahia"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "CE"
+            ],
+            "title": "Cear\u00e1"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "DF"
+            ],
+            "title": "Distrito Federal"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "ES"
+            ],
+            "title": "Esp\u00edrito Santo"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "GO"
+            ],
+            "title": "Goi\u00e1s"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "MA"
+            ],
+            "title": "Maranh\u00e3o"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "MG"
+            ],
+            "title": "Minas Gerais"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "MS"
+            ],
+            "title": "Mato Grosso do Sul"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "MT"
+            ],
+            "title": "Mato Grosso"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "PA"
+            ],
+            "title": "Par\u00e1"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "PB"
+            ],
+            "title": "Para\u00edba"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "PE"
+            ],
+            "title": "Pernambuco"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "PI"
+            ],
+            "title": "Piau\u00ed"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "PR"
+            ],
+            "title": "Paran\u00e1"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "RJ"
+            ],
+            "title": "Rio de Janeiro"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "RN"
+            ],
+            "title": "Rio Grande do Norte"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "RO"
+            ],
+            "title": "Rond\u00f4nia"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "RR"
+            ],
+            "title": "Roraima"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "RS"
+            ],
+            "title": "Rio Grande do Sul"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "SC"
+            ],
+            "title": "Santa Catarina"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "SE"
+            ],
+            "title": "Sergipe"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "SP"
+            ],
+            "title": "S\u00e3o Paulo"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "TO"
+            ],
+            "title": "Tocantins"
+          }
+        ]
+      },
+      "title": {
+        "type": "string",
+        "title": "Title",
+        "default": "Site da Câmara",
+        "description": "Um título curto para o site. Ele será mostrado como parte do título da janela do navegador em cada página."
+      },
+      "description": {
+        "type": "string",
+        "title": "Descrição",
+        "default": "Descrição sobre o site"
+      },
+      "logo": {
+        "type": "string",
+        "format": "data-url",
+        "title": "Logo da Instituição"
+      },
+      "default_language": {
+        "type": "string",
+        "title": "Idioma padrão",
+        "default": "pt-br"
+      },
+      "portal_timezone": {"$ref": "#/definitions/timezones"},
+      "setup_content": {
+        "type": "boolean",
+        "title": "Criar conteúdo de exemplo",
+        "description": "Devemos criar conteúdo de exemplo?",
+        "default": true
+      }
+    },
+    "definitions": {
+      "timezones": {
+        "title": "Fuso horário",
+        "type": "string",
+        "default": "America/Sao_Paulo",
+        "description": "A configuração de fuso horário padrão do portal. Os usuários poderão definir seu próprio fuso horário, se os fusos horários disponíveis estiverem definidos nas configurações de data e hora.",
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "America/Rio_Branco"
+            ],
+            "title": "Acre (America/Rio_Branco)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Noronha"
+            ],
+            "title": "Fernando de Noronha (America/Noronha)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Sao_Paulo"
+            ],
+            "title": "Brasília (America/Sao_Paulo)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Manaus"
+            ],
+            "title": "Manaus (America/Manaus)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "UTC"
+            ],
+            "title": "UTC (UTC)"
+          }
+        ]
+      }
+    }
+  },
+  "uischema": {
+    "default_language": {
+      "ui:widget": "hidden"
+    },
+    "logo": {
+      "ui:widget": "file",
+      "ui:options": {"accept": ".svg"}
+      }
+  }
+}
